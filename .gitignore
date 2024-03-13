@@ -1,0 +1,15 @@
+_build/
+.envrc
+.gradle/
+.hatch/
+.jupyter_cache/
+.ruff_cache/
+.venv/
+.vscode/
+*.jar
+*.jp2rt
+*.png
+*.tsv
+build/
+dist/
+venv/

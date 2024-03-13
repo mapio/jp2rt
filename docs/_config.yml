@@ -1,0 +1,48 @@
+# https://jupyterbook.org/customize/config.html
+
+title: jp²rt
+author: Marianna Iorio, Sonia Maffioli, Massimo Santini, Matteo Simone
+logo: logo.png
+
+execute:
+  execute_notebooks: cache
+  timeout: 600
+
+repository:
+  url: https://github.com/mapio/jp2rt
+  path_to_book: docs
+  branch: master
+
+html:
+  home_page_in_navbar: false
+  use_repository_button: true
+  use_download_button: false # seems not to work
+
+sphinx:
+  extra_extensions:
+  - sphinx.ext.autodoc
+  - sphinx.ext.napoleon
+  - sphinx.ext.viewcode
+  - sphinx.ext.intersphinx
+  - sphinx.ext.todo
+  config:
+    html_theme_options:
+      use_download_button: false
+      use_repository_button: true
+      repository_url:  https://github.com/mapio/jp2rt
+    todo_include_todos: true
+    nb_execution_show_tb: true
+    add_module_names: false
+    intersphinx_mapping:
+      python: 
+        - https://docs.python.org/3
+        - null
+      numpy:
+        - https://numpy.org/doc/stable/
+        - null
+      sklearn:
+        - https://scikit-learn.org/stable/
+        - null
+      scipy:
+        - https://docs.scipy.org/doc/scipy/
+        - null

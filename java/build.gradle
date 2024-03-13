@@ -1,0 +1,82 @@
+plugins {
+  id 'java-library'
+  id 'maven-publish'
+  id 'com.github.johnrengelman.shadow' version '8.1.1'
+  id 'com.diffplug.spotless' version '6.25.0'
+  id 'com.palantir.git-version' version '3.0.0'
+}
+
+group = 'it.unimi.di.santini'
+version versionDetails().lastTag.substring(1)
+
+java {
+  withJavadocJar()
+  withSourcesJar()
+  toolchain {
+    languageVersion = JavaLanguageVersion.of(17)
+  }
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  testImplementation 'org.junit.jupiter:junit-jupiter:5.9.3'
+  testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+  api 'org.openscience.cdk:cdk-bundle:2.9'
+  api 'me.tongfei:progressbar:0.10.0'
+}
+
+shadowJar {
+  archiveBaseName.set('jp2rt')
+}
+
+jar {
+  manifest {
+    attributes 'Main-Class': 'it.unimi.di.jp2rt.MolecularDescriptorsCalculator'
+  }
+}
+
+javadoc {
+  options {
+    encoding = 'UTF-8'
+    charSet = 'UTF-8'
+    links = [ 'https://docs.oracle.com/en/java/javase/17/docs/api/', 'https://cdk.github.io/cdk/1.5/docs/api/' ]
+    docTitle = 'jp2rt - A Python and Java package to Predict Retention Times'
+    overview = 'src/overview.html'
+  }
+}
+
+tasks.named('test') {
+  useJUnitPlatform()
+}
+
+spotless {
+  enforceCheck false
+  java {
+    googleJavaFormat('1.21.0')
+    removeUnusedImports()
+    indentWithSpaces(2)
+    endWithNewline()
+    licenseHeaderFile 'src/licenseHeaderFile.txt'
+  }
+}
+
+publishing {
+  publications {
+    maven(MavenPublication) {
+      from components.java
+    }
+  }
+  repositories {
+    maven {
+      name = "GitHubPackages"
+      url = "https://maven.pkg.github.com/mapio/jp2rt"
+      credentials {
+        username = System.getenv("GITHUB_ACTOR")
+        password = System.getenv("GITHUB_TOKEN")
+      }
+    }
+  }
+}

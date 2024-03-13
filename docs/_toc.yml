@@ -1,0 +1,22 @@
+# https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: Install
+    chapters:
+      - file: install
+  - caption: A worked out example
+    maxdepth: 2
+    chapters:
+      - file: example/descriptors
+      - file: example/estimate
+      - file: example/predict
+      - file: example/example-data
+  - caption: Reference
+    chapters:
+      - file: reference/command-line
+      - file: reference/python-api
+      - url: https://mapio.github.io/jp2rt/javadoc/it/unimi/di/jp2rt/package-summary.html
+        title: Java API
+      - file: reference/appendix
