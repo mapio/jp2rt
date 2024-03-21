@@ -62,12 +62,12 @@ def compute_descriptors(smiles):
     smiles (:obj:`str`): The SMILES of the molecule of which the descriptors should be computed.
 
   Returns:
-    :obj:`list(float)`: the descriptor values.
+    :obj:`list` of :obj:`float`: the descriptor values.
   """
   with JavaLib() as jl:
-    TSVLine = jl('TSVLine')
+    TSVRow = jl('TSVRow')
     MolecularDescriptorsWrapper = jl('MolecularDescriptorsWrapper')
-    tsv_line = MolecularDescriptorsWrapper().calculate(TSVLine(smiles))
+    tsv_line = MolecularDescriptorsWrapper().calculate(TSVRow(smiles))
     return [float(_) for _ in tsv_line.descriptors()]
 
 
@@ -80,7 +80,7 @@ def compute_single_descriptor(name, smiles):
     smiles (:obj:`str`): The SMILES of the molecule of which the descriptors should be computed.
 
   Returns:
-    :obj:`list(float)`: the descriptor values.
+    :obj:`list` of :obj:`float`: the descriptor values.
   """
   with JavaLib() as jl:
     SilentChemObjectBuilder = jl('org.openscience.cdk.silent.SilentChemObjectBuilder')
