@@ -74,7 +74,7 @@ features = ["docs"]
 clean = ["jupyter-book clean --all docs"]
 build = [
   "./gradlew javadoc",
-  "jupyter-book build docs",
+  "jupyter-book build -nW docs",
   "cp -rv java/build/docs/javadoc docs/_build/html",
   "chmod -R a+rX docs/_build"
 ]
