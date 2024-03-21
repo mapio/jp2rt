@@ -53,7 +53,7 @@ not_computed
 
 The reason why such descriptors are not computed is that their computation
 returns just NaN values or raise exceptions, as one can easily check with the
-{func}`~jp2rt.ml.compute_single_descriptor` function.
+{func}`~jp2rt.java.compute_single_descriptor` function.
 
 ```{code-cell} ipython3
 import numpy as np 
@@ -77,9 +77,11 @@ corresponds exactly to the output produced by the current version of the
 package.
 
 If you want to run the code of this documentation besides the `jp²rt` package
-(with `plot` dependencies included). Otherwise you can download a copy of the
-documentation from the [Releases](https://github.com/mapio/jp2rt/releases) page
-of the `jp²rt` repository.
+(with `plot` dependencies included) you need to install [Jupiter
+Book](https://jupyterbook.org/). Otherwise you can download a precompiled copy
+of the documentation from the
+[Releases](https://github.com/mapio/jp2rt/releases) page of the `jp²rt`
+repository.
 
 The following table reports the computation time of the various code samples for
 every section of this documentation.

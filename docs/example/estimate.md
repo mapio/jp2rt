@@ -29,7 +29,8 @@ X = load_descriptors('plasma+descriptors.tsv')
 y = load_retention_times('plasma+descriptors.tsv')
 ```
 
-As a check we can verify that the number or rows in `X` is the same as the number of rows in `y`:
+As a check we can verify that the number of rows in `X` is the same as the
+number of rows in `y`:
 
 ```{code-cell} ipython3
 X.shape, y.shape
@@ -129,7 +130,7 @@ Since the *cross validation* runs a model estimation per split (in this example,
 5 times, that is the default value for the evaluation function), we get the
 *mean* and *std* (standard deviation) of two metrics of interest:
 
-* the *coefficient of determination* ($R^2$) computer by
+* the *coefficient of determination* ($R^2$) computed by
   {func}`~sklearn.metrics.r2_score`, and
 * the *root mean squared error* (RMSE) computed by
   {func}`~sklearn.metrics.root_mean_squared_error`.

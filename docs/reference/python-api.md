@@ -111,7 +111,7 @@ implementation with the Python code. Java code execution in Python is made
 possible by [`SciJava`](https://github.com/scijava/) that in turn is built on
 [JPype](https://jpype.readthedocs.io/.
 
-For *bulk* operations it is better to avid a Python/Java conversion of data for
+For *bulk* operations it is better to avoid a Python/Java conversion of data for
 each molecule; for this reason the following function works by reading and
 writing the data from *tab separated values* files.
 
