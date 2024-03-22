@@ -1,4 +1,4 @@
-# `jp²rt`
+![Logo](docs/logo.png)
 
 ## A Java and Python package to Predict Retention Times
 
