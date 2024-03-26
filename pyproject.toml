@@ -34,7 +34,7 @@ dependencies = [
 jp2rt = "jp2rt.scripts:cli"
 
 [project.urls]
-Home = "https://github.com/mapio/jp2rt"
+Home = "https://mapio.github.io/jp2rt/"
 Issues = "https://github.com/mapio/jp2rt/issues"
 Source = "https://github.com/mapio/jp2rt"
 

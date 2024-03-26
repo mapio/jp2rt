@@ -13,7 +13,8 @@ kernelspec:
 # Compute the descriptors
 
 The present implementation offers a particular advantage over the original Retip
-application (that was based on R) in terms of speed. In `jp²rt`, the descriptors
+application (that was based on R) in terms of speed and reliability. In `jp²rt`,
+[molecular descriptors](https://egonw.github.io/cdkbook/descriptor.html) are
 computed directly in Java, using *parallel streams* (exploiting all the
 available CPUs).
 
