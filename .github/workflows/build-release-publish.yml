@@ -84,11 +84,14 @@ jobs:
         with:
           name: github-pages
           path: .
-      - name: Convert to zip the docs
+      - name: Convert to zip the docs and prepare example-data archive
         run: |
           mkdir docs-${GITHUB_REF##*/}
+          mkdir example-data-${GITHUB_REF##*/}
           tar -C docs-${GITHUB_REF##*/} -xvf artifact.tar
           zip -r docs-${GITHUB_REF##*/}.zip docs-${GITHUB_REF##*/}
+          cp docs/example/*.tsv example-data-${GITHUB_REF##*/}
+          zip -r example-data-${GITHUB_REF##*/}.zip example-data-${GITHUB_REF##*/}
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
@@ -96,6 +99,7 @@ jobs:
           files: |
             jp2rt-*-all.jar
             docs-*.zip
+            example-data-*.zip
 
   pages:
     runs-on: ubuntu-latest

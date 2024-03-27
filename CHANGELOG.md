@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.2 (2024-03-27)
+
+- Implemented documentation improvements suggested by dr. Justin van der Hooft.
+- Updated logo to the new suggested one.
+- Added example data to the release.
+
 ## 0.2.1 (2024-03-21)
 
 - Implemented fixes from Naicons.

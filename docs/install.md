@@ -57,21 +57,20 @@ On Windows:
 
 ## Install the package
 
-Within the activated environment, use the following command to install the
-package:
-
-```bash
-$ pip install jp2rt
-```
-
-if you want to be able to generate evaluation plots for the estimated models,
-install the package as
+Within the activated environment, use the following command to install the full
+version of the package:
 
 ```bash
 $ pip install jp2rt[plot]
 ```
 
-to automatically install the required dependencies.
+If you plan to use the package on a system with no graphic support (for
+instance, on an headless high-performance computing cluster), you can install
+the package without the optional dependencies for plotting as:
+
+```bash
+$ pip install jp2rt
+```
 
 To check the installation just run
 

@@ -14,7 +14,13 @@ kernelspec:
 
 To provide some example of execution of `jp²rt`, we'll use a small curated
 dataset, namely the [PlaSMA](http://plasma.riken.jp/) dataset that can be freely
-download from the network.
+obtained from such project.
+
+You can get the data yourself (for instance to be sure to have the latest
+available version of it) using the approach suggested in this section, or
+download the data used to generate this documentation as contained in the
+{file}`example-data.zip` file available as one of the "Asset" of the [current
+release](https://github.com/mapio/jp2rt/releases).
 
 The dataset is provided in NIST MS format (`.msp`), so we'll write a `msp2tsv`
 function to convert such format to the *tab separated values* (`.tsv`) used to
