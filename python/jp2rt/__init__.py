@@ -1,6 +1,6 @@
 from importlib.util import find_spec
 
-__version__ = '0.2.2a1'
+__version__ = '0.2.3'
 
 HAS_PLOT = (find_spec('matplotlib') is not None) and (find_spec('seaborn') is not None)
 
