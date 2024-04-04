@@ -56,3 +56,6 @@ If you find this packge useful, please cite it as follows:
 > [Massimo Santini](https://santini.di.unimi.it/)<sup>‡</sup>, and [Matteo
 > Simone](https://www.linkedin.com/in/matteo-simone-7b8151123/)<sup>†</sup>  —
 > [10.5281/zenodo.10846234](https://doi.org/10.5281/zenodo.10846234).
+
+This work has been partially supported by Grant No. DM60066 from the Italian
+Ministry of University and Research to Naicons<sup>†</sup> srl.

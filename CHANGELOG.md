@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.3 (2024-04-04)
+
+- Added a reference to the grant supporting the development of the package.
+
 ## 0.2.2 (2024-03-27)
 
 - Implemented documentation improvements suggested by dr. Justin van der Hooft.
